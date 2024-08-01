@@ -1,7 +1,7 @@
-package egor.pantushov.robot_clerk.impl;
+package egor.pantushov.unit_tests.impl;
 
 
-import egor.pantushov.robot_clerk.ReportSender;
+import egor.pantushov.unit_tests.ReportSender;
 import org.springframework.stereotype.Component;
 
 @Component

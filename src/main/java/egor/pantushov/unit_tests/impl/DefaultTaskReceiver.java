@@ -1,9 +1,9 @@
-package egor.pantushov.robot_clerk.impl;
+package egor.pantushov.unit_tests.impl;
 
 
 
-import egor.pantushov.robot_clerk.Task;
-import egor.pantushov.robot_clerk.TaskReceiver;
+import egor.pantushov.unit_tests.Task;
+import egor.pantushov.unit_tests.TaskReceiver;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;

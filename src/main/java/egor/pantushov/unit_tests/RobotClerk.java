@@ -1,20 +1,17 @@
-package egor.pantushov.robot_clerk;
+package egor.pantushov.unit_tests;
 
 
-import egor.pantushov.robot_clerk.annotation.InjectRandomInt;
+import egor.pantushov.unit_tests.annotation.InjectRandomInt;
+import egor.pantushov.unit_tests.impl.TaskExeptionExecutor;
 import jakarta.annotation.PostConstruct;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 
 @Component
 
 public class RobotClerk {
-    @Qualifier("sortedTaskReceiver")
+
     private final TaskReceiver taskReceiver;
     private final TaskExecutor taskExecutor;
     private final ReportSender reportSender;
@@ -24,7 +21,7 @@ public class RobotClerk {
     @InjectRandomInt(min = 1, max = 3)
     private  int repeat = 1;
 
-    public RobotClerk(@Qualifier("sortedTaskReceiver") TaskReceiver taskReceiver, TaskExecutor taskExecutor, ReportSender reportSender) {
+    public RobotClerk(@Qualifier("sortedTaskReceiver") TaskReceiver taskReceiver, @Qualifier("TaskExeptionExecutor") TaskExecutor taskExecutor, ReportSender reportSender) {
         this.taskReceiver = taskReceiver;
         this.taskExecutor = taskExecutor;
         this.reportSender = reportSender;

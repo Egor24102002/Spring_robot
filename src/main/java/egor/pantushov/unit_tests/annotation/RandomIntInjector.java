@@ -1,6 +1,5 @@
-package egor.pantushov.robot_clerk.annotation;
+package egor.pantushov.unit_tests.annotation;
 
-import egor.pantushov.robot_clerk.annotation.InjectRandomInt;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;

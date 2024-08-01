@@ -1,11 +1,11 @@
-package egor.pantushov.robot_clerk.impl;
+package egor.pantushov.unit_tests.impl;
 
 
-import egor.pantushov.robot_clerk.Task;
-import egor.pantushov.robot_clerk.TaskExecutor;
+import egor.pantushov.unit_tests.Task;
+import egor.pantushov.unit_tests.TaskExecutor;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("TaskExecutorImpl")
 public class TaskExecutorImpl implements TaskExecutor {
     @Override
     public String execute(Task task) {

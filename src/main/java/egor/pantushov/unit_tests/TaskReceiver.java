@@ -1,6 +1,4 @@
-package egor.pantushov.robot_clerk;
-
-import org.springframework.stereotype.Component;
+package egor.pantushov.unit_tests;
 
 import java.util.stream.Stream;
 

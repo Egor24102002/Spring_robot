@@ -1,4 +1,4 @@
-package egor.pantushov.robot_clerk;
+package egor.pantushov.unit_tests;
 
 import lombok.Data;
 

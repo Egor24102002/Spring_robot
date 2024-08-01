@@ -1,4 +1,4 @@
-package egor.pantushov.robot_clerk.annotation;
+package egor.pantushov.unit_tests.annotation;
 
 import java.lang.annotation.Retention;
 

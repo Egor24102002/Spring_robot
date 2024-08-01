@@ -1,7 +1,7 @@
-package egor.pantushov.robot_clerk.impl;
+package egor.pantushov.unit_tests.impl;
 
-import egor.pantushov.robot_clerk.Task;
-import egor.pantushov.robot_clerk.TaskReceiver;
+import egor.pantushov.unit_tests.Task;
+import egor.pantushov.unit_tests.TaskReceiver;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -11,21 +11,13 @@ import java.util.stream.Stream;
 
 @Component("sortedTaskReceiver")
 public class SortedTaskReceiver implements TaskReceiver {
-    private final List<Task> tasks;
 
-    public SortedTaskReceiver() {
-        this.tasks = Arrays.asList(
+    public Stream<Task> getTasks() {
+        return Stream.of(
                 new Task("Print docs", "Print 10 pages of document"),
                 new Task("Calculate expenses", "Calculate monthly expenses"),
                 new Task("Email report", "Send weekly report via email"),
-                new Task("Meet with team", "Discuss project updates with team")
-        );
-    }
-
-
-    public Stream<Task> getTasks() {
-        return tasks.stream()
-                .sorted(Comparator.comparing(Task::getText));
+                new Task("Meet with team", "Discuss project updates with team")) .sorted(Comparator.comparing(Task::getText));
     }
 
 
